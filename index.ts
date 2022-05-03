@@ -6,8 +6,6 @@ const app = express()
 
 app.use(express.json())
 
-// ... your REST API routes will go here
-
 
 app.get('/users', async (req, res) => {
     const users = await prisma.user.findMany()

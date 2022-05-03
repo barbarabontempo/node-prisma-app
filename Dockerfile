@@ -1,6 +1,7 @@
 FROM node:alpine
 
 WORKDIR /app
+
 # COPY package.json and package-lock.json files
 COPY package*.json ./
 
@@ -26,3 +27,13 @@ EXPOSE 3000
 # A command to start the server
 CMD npm start
 
+# Set environment variables
+ENV DD_SERVICE sample-prisma-app
+ENV DD_VERSION 1.0
+
+# Variables needed so tracer knows where to send the traces to
+ENV DD_AGENT_HOST datadog-agent
+ENV DD_TRACE_AGENT_PORT 8126
+
+LABEL com.datadoghq.tags.service="sample-prisma-app"
+LABEL com.datadoghq.tags.version="1.0"
