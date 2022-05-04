@@ -17,6 +17,7 @@ docker -v
 - Step 3: Migrate prisma schema
 - Step 4: Generating Traces
 - Step 5: Generating traces with prisma queries
+- Step 6: Shutting it down
 
 ### Step 1: Configure the ENV file with your Datadog Agent API Key 
 
@@ -35,6 +36,14 @@ Now when you run the next steps, you don't have to worry about your API Key in p
 2. Spin up the containers: `docker-compose up` or `docker-compose up -d` to run containers in the background.
 
 ### Step 3: Migrate prisma schema
+
+Navigate to your Docker dashboard and check that all your images are up and running: 
+![Docker images running](https://p-qkfgo2.t2.n0.cdn.getcloudapp.com/items/KouAXjoK/8578eace-651c-4173-9e70-8283ead86fe1.jpg?source=viewer&v=a7eb210fab1808b2d0ec7882fb5e1f17)
+
+Then, hover over the prisma-postgres-api and open the integrated Docker API: 
+![Prisma cli](https://p-qkfgo2.t2.n0.cdn.getcloudapp.com/items/d5u9qOo8/6d6bd25c-8631-446e-8af5-e9bfce823347.jpg?source=viewer&v=1e49063635c2c85acb601b73a3aefb48)
+
+This will launch an interactive CLI to run your API commands. In this case, you want to run the `npx prisma migrate dev` command. This will allow the database to sync with the schema in the application.
 
 ### Step 4: Generating traces
 
@@ -86,6 +95,10 @@ curl -X DELETE http://localhost:3000/post/1
 ```
 
 ### Step 5: Generating traces with prisma queries
+
+### Step 6: Shutting it down
+
+If you are still in the same terminal you have initialized the app from, you can use Ctrl + C to stop the containers, then run docker-compose down to remove the containers and the network. If you are in a different terminal, you can simply run docker-compose down to both stop the application and remove the containers/network.
 
 ## Frameworks and Libraries
 
