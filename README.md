@@ -105,7 +105,7 @@ curl -X DELETE http://localhost:3000/post/1
 If you are still in the same terminal you have initialized the app from, you can use Ctrl + C to stop the containers, then run docker-compose down to remove the containers and the network. If you are in a different terminal, you can simply run docker-compose down to both stop the application and remove the containers/network.
 
 ## Credit
-I was able to get the prisma query traces to appear on Datadog thanks to the solution provided in this Github issue: https://github.com/DataDog/dd-trace-js/issues/1244
+I was able to get the prisma query traces to appear in Datadog thanks to the solution provided in this Github issue: https://github.com/DataDog/dd-trace-js/issues/1244
 
 ## Frameworks and Libraries
 
