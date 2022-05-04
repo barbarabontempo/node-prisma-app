@@ -41,7 +41,7 @@ Navigate to your Docker dashboard and check that all your images are up and runn
 
 ***postgres*** - to execute and run the Postgres database container on port 5432. To access the database, set the environment as POSTGRES_USER: postgres, POSTGRES_PASSWORD: postgres, and POSTGRES_DB: myblog.
 
-***nose-prisma-app_datadog-agent_***1 - This is the Datadog Agent image that are Traces will be sent to.
+***node-prisma-app_datadog-agent_1*** - This is the Datadog Agent image that are Traces will be sent to.
 
 ***pgadmin*** - Pgadmin will help you have a visual representation of the Postgres database. It has an interactive UI that lets you see the data that you manipulate. Prisma automatically sets this database and table.
 
