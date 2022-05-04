@@ -39,13 +39,13 @@ Now when you run the next steps, you don't have to worry about your API Key in p
 Navigate to your Docker dashboard and check that all your images are up and running: 
 ![Docker images running](https://p-qkfgo2.t2.n0.cdn.getcloudapp.com/items/KouAXjoK/8578eace-651c-4173-9e70-8283ead86fe1.jpg?source=viewer&v=a7eb210fab1808b2d0ec7882fb5e1f17)
 
-postgres - to execute and run the Postgres database container on port 5432. To access the database, set the environment as POSTGRES_USER: postgres, POSTGRES_PASSWORD: postgres, and POSTGRES_DB: myblog.
+***postgres*** - to execute and run the Postgres database container on port 5432. To access the database, set the environment as POSTGRES_USER: postgres, POSTGRES_PASSWORD: postgres, and POSTGRES_DB: myblog.
 
-nose-prisma-app_datadog-agent_1 - This is the Datadog Agent image that are Traces will be sent to.
+***nose-prisma-app_datadog-agent_***1 - This is the Datadog Agent image that are Traces will be sent to.
 
-pgadmin - Pgadmin will help you have a visual representation of the Postgres database. It has an interactive UI that lets you see the data that you manipulate. Prisma automatically sets this database and table.
+***pgadmin*** - Pgadmin will help you have a visual representation of the Postgres database. It has an interactive UI that lets you see the data that you manipulate. Prisma automatically sets this database and table.
 
-prisma-postgres-api - this service runs the Prisma API that you have just created. It will access the Postgres service, run the Prisma schema and populate our data models to the database.
+***prisma-postgres-api*** - this service runs the Prisma API that you have just created. It will access the Postgres service, run the Prisma schema and populate our data models to the database.
 
 Then, hover over the prisma-postgres-api and open the integrated Docker API: 
 ![Prisma cli](https://p-qkfgo2.t2.n0.cdn.getcloudapp.com/items/d5u9qOo8/6d6bd25c-8631-446e-8af5-e9bfce823347.jpg?source=viewer&v=1e49063635c2c85acb601b73a3aefb48)
