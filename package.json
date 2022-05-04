@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node --require dd-trace/init index.ts"
+    "start": "ts-node index.ts"
   },
   "repository": {
     "type": "git",
