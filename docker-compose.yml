@@ -18,10 +18,8 @@ services:
       - DD_DOGSTATSD_NON_LOCAL_TRAFFIC=true
       - DD_AC_EXCLUDE=name:datadog-agent
       - DD_LOGS_ENABLED=TRUE
-    # depends_on: 
-    #   - prisma-postgres-api
 
-  postgres:
+  postgres: 
     image: postgres:latest
     container_name: postgres
     hostname: postgres
